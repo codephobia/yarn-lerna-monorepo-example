@@ -1,0 +1,28 @@
+{
+    "name": "yarn-lerna-monorepo-example",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/codephobia/yarn-lerna-monorepo-example.git",
+    "author": "codephobia",
+    "license": "MIT",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "npmClient": "yarn",
+    "useWorkspaces": true,
+    "scripts": {
+        "ng": "ng",
+        "website:start": "lerna run start --scope=@codephobia/website --stream",
+        "website:build": "lerna run build --scope=@codephobia/website --stream",
+        "website:test": "lerna run test --scope=@codephobia/website --stream",
+        "website:lint": "lerna run lint --scope=@codephobia/website --stream",
+        "server:start": "lerna run start --scope=@codephobia/server --stream",
+        "server:docker:build": "docker build -t codephobia-server:latest -f ./deploy/containers/server/Dockerfile .",
+        "server:docker:compose": "cd deploy && docker-compose up",
+        "e2e": "ng e2e"
+    },
+    "dependencies": {
+        "lerna": "^3.20.2"
+    }
+}

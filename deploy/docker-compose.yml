@@ -1,0 +1,12 @@
+version: "3"
+networks:
+  appnet:
+
+services:
+  nginx:
+    container_name: codephobia-server
+    image: codephobia-server:latest
+    ports:
+      - 3000:3000
+    networks:
+      - appnet

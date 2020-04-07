@@ -1,0 +1,11 @@
+{
+    "name": "@codephobia/server",
+    "version": "0.0.1",
+    "main": "index.js",
+    "scripts": {
+        "start": "node ."
+    },
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
