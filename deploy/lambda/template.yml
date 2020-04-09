@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: "AWS::Serverless-2016-10-31"
+
+Globals:
+  Function:
+    Timeout: 3600
+
+Resources:
+  LambdaJSCron:
+    Type: "AWS::Serverless::Function"
+
+    Properties:
+      Runtime: nodejs12.x
+      Handler: index.handler
+      CodeUri: ../../dist/local/lambda-js-cron.zip
+
+      Environment:
+        Variables:
+          ENVKEY: ENVKEY
+
+      Events:
+        CronHandler:
+          Type: Schedule
+          Properties:
+            Schedule: rate(15 minutes)

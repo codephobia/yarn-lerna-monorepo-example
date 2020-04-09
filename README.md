@@ -12,6 +12,12 @@ A test to get a monorepo running with yarn workspaces and lerna.
 
 `yarn install`
 
+3. Install Claudia globally.
+
+`npm i -g claudia`
+
+We need this to build the lambda zip files with the local dependencies since sam cli doesn't support this yet.
+
 ## Website
 
 An example Angular app.

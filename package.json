@@ -9,8 +9,6 @@
     "workspaces": [
         "packages/*"
     ],
-    "npmClient": "yarn",
-    "useWorkspaces": true,
     "scripts": {
         "ng": "ng",
         "website:start": "lerna run start --scope=@codephobia/website --stream",
@@ -20,6 +18,7 @@
         "server:start": "lerna run start --scope=@codephobia/server --stream",
         "server:docker:build": "docker build -t codephobia-server:latest -f ./deploy/containers/server/Dockerfile .",
         "server:docker:compose": "cd deploy && docker-compose up",
+        "lambda-js-cron:invoke": "cd deploy/lambda && sh lambda-js-cron.sh",
         "e2e": "ng e2e"
     },
     "dependencies": {

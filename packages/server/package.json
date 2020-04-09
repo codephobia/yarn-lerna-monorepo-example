@@ -1,7 +1,8 @@
 {
     "name": "@codephobia/server",
     "version": "0.0.1",
-    "main": "index.js",
+    "main": "src/index.js",
+    "private": true,
     "scripts": {
         "start": "node ."
     },

@@ -1,0 +1,17 @@
+{
+    "name": "@codephobia/lambda-js-cron",
+    "version": "0.0.1",
+    "main": "index.js",
+    "private": true,
+    "scripts": {
+        "start": "node ."
+    },
+    "dependencies": {
+        "@codephobia/logger": "0.0.1"
+    },
+    "workspaces": {
+        "nohoist": [
+            "@codephobia/logger"
+        ]
+    }
+}
