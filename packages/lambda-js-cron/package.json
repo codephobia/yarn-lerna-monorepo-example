@@ -1,6 +1,6 @@
 {
     "name": "@codephobia/lambda-js-cron",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "main": "index.js",
     "private": true,
     "scripts": {
