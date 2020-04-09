@@ -45,3 +45,9 @@ Build the container:
 Run the container with docker compose:
 
 `yarn run server:docker:compose`
+
+## TODO
+
+- Determine which commit types add entries to the changelog.
+- Can we get changelogs to show up on releases?
+- Why is the %s not working in the publish message for lerna?
